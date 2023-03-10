@@ -93,7 +93,7 @@ class Board(object):
 
                 self.step()
                 if pygame.key.get_focused():
-                    if keys[pygame.K_LSHIFT]:
+                    if not keys[pygame.K_LSHIFT]:
                         self.display(main_surface, cells_surface)
                     if keys[pygame.K_SPACE]:
                         frame_time = time.time() - start_time
